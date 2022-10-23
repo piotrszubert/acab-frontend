@@ -1,10 +1,33 @@
 <script>
 	import '../app.css';
-  import Nav from '$lib/Nav.svelte';
 	import Footer from '../lib/Footer.svelte';
+	import ThemeSelect from '../lib/ThemeSelect.svelte';
+
+
+
+  import { onMount } from 'svelte';
+
+onMount(() => { 
+  // const theme = document.querySelector('[data-theme]');
+  // console.log(theme.dataset.theme);
+  // console.log('mounted')
+});
+
+const routeChange = () => {
+  // console.log('changed path')  
+}
+
+import { page } from '$app/stores';
+import { navigating } from '$app/stores';
+
+$: if($navigating) routeChange();
+
+
+
+
 </script>
 
-<!-- <Nav/> -->
+
 
 <div class="drawer">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
@@ -20,12 +43,18 @@
       <div class="flex-none hidden lg:block">
         <ul class="menu menu-horizontal">
           <!-- Navbar menu content here -->
-          <li><a>Navbar Item 1</a></li>
-          <li><a>Navbar Item 2</a></li>
+          <li class="nav-item">
+            <a class="nav-link" rel="prefetch" class:underline={$page.url.pathname === '/'} aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" rel="prefetch" class:underline={$page.url.pathname === '/contact'} href="/contact">Kontakt</a>
+          </li>
+          
         </ul>
       </div>
     </div>
     <!-- Page content here -->
+    <ThemeSelect/>
     <slot />
     <Footer/> 
   </div> 
@@ -33,8 +62,12 @@
     <label for="my-drawer-3" class="drawer-overlay"></label> 
     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100">
       <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
+      <li class="nav-item">
+        <a class="nav-link" rel="prefetch" class:underline={$page.url.pathname === '/'} aria-current="page" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" rel="prefetch" class:underline={$page.url.pathname === '/contact'} href="/contact">Kontakt</a>
+      </li>
       
     </ul>
     
