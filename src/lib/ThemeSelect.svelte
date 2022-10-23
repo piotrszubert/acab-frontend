@@ -19,6 +19,12 @@
             option.textContent = theme;
             option.dataset.theme = theme;
             option.style.cursor = 'pointer';
+            const cardClasses = ['bg-base-100', 'btn',
+            'btn-primary', 'text-primary', 'border', 'border-2', 'border-primary',  'border-secondary',  'hover:text-secondary', ]
+
+            //   'primary-content', 'hover:bg-secondary', 'hover:border-secondary', 'hover:text-white', 'text-secondary'
+
+            option.classList.add(...cardClasses);
             
             option.addEventListener('click', function(theme) {
                 const root = document.documentElement;
@@ -29,13 +35,34 @@
             options.appendChild(option);
         }
 
+
+        const countThemes = () => {
+            console.log(document.querySelectorAll('.option').length);
+            let themeCounter = document.querySelector('.stat-value');
+            themeCounter.textContent = document.querySelectorAll('.option').length
+        }
+
+        countThemes();
     });
+
 
 
 
 </script>
 
-<div bind class="options grid grid-cols-3 gap-4">
-
-
+<h2 class="text-3xl font-bold">
+    Choose your theme!
+</h2>
+<!-- <div class="options grid grid-cols-3 gap-4 p-4 capitalize"></div> -->
+<div class="options grid grid-cols-2 md:grid-cols-3 gap-4 py-4 capitalize"></div>
+<div class="p-4 flex justify-center">
+    <div class="stats bg-primary">
+  
+        <div class="stat text-center p-12">
+          <div class="stat-title font-black">Total theme count</div>
+          <div class="stat-value">20+</div>
+          <div class="stat-desc font-bold">or create your own theme</div>
+        </div>
+        
+      </div>
 </div>
