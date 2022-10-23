@@ -4,6 +4,13 @@
     
     onMount(() => {
         const root = document.documentElement;
+        let localStorageTheme = localStorage.getItem('theme');
+
+        if(localStorageTheme) {
+            root.dataset.theme = localStorageTheme;
+            console.log(localStorageTheme);
+        }
+
         const options = document.querySelector('.options');        
 
         for (const theme of themes) {
@@ -16,6 +23,7 @@
             option.addEventListener('click', function(theme) {
                 const root = document.documentElement;
                 root.dataset.theme = theme.currentTarget.dataset.theme;
+                localStorage.setItem('theme', theme.currentTarget.dataset.theme);
                 console.log(theme.currentTarget.dataset.theme)
             });
             options.appendChild(option);
