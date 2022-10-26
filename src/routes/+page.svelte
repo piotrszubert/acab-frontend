@@ -19,34 +19,46 @@
   <Stats/>
 </section>
 
-<div class="flex flex-col md:flex-row px-4 py-10">
-  <div class="grid flex-grow place-items-center">
-    <div class="avatar">
-      <div class="rounded w-full h-full">
-        <img src="https://placeimg.com/400/400/people" />
-      </div>
+<section>
+  <section>
+    <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
+        <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
+            <div class="p-6">
+                <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src="/news-1.jpg" alt="blog">
+
+                <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">Short headline.</h1>
+                <p class="mx-auto text-base leading-relaxed text-gray-500">Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+
+                <div class="mt-4">
+                    <a href="#" class="inline-flex items-center mt-4 font-semibold text-secondary lg:mb-0 hover:text-primary" title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6">
+                <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src="/news-1.jpg" alt="blog">
+
+                <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">Short headline.</h1>
+                <p class="mx-auto text-base leading-relaxed text-gray-500">Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+
+                <div class="mt-4">
+                    <a href="#" class="inline-flex items-center mt-4 font-semibold text-secondary lg:mb-0 hover:text-primary" title="read more"> Read More » </a>
+                </div>
+            </div>
+            <div class="p-6">
+                <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src="/news-1.jpg" alt="blog">
+
+
+                <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">Short headline.</h1>
+                <p class="mx-auto text-base leading-relaxed text-gray-500">Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+
+                <div class="mt-4">
+                    <a href="#" class="inline-flex items-center mt-4 font-semibold text-secondary lg:mb-0 hover:text-primary" title="read more"> Read More » </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <h3 class="py-3 text-2xl font-bold">Heading title!</h3>
-    <p class="text-center w-2/4">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-      Odio illum commodi, iste deleniti reiciendis sequi.
-    </p>
-    
-  </div>
-  
-  <div class="grid p-2 flex-grow card place-items-center">
-    <div class="avatar">
-      <div class="rounded w-full h-full">
-        <img src="https://placeimg.com/400/400/people" />
-      </div>
-    </div>
-    <h3 class="py-3 text-2xl font-bold">Heading title!</h3>
-    <p class="text-center w-2/4">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-      Odio illum commodi, iste deleniti reiciendis sequi.
-    </p>
-  </div>
-</div>
+</section>
+
+</section>
 
 <div class="p-4">
   <!-- <ThemeSelect/> -->
