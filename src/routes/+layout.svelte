@@ -1,3 +1,9 @@
+<style>
+  :global(*) {
+    scroll-behavior: smooth;
+  }
+</style>
+
 <script>
 	import '../app.css';
 	import { page } from '$app/stores';
